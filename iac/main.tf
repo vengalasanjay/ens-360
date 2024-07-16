@@ -17,22 +17,22 @@ provider "aws" {
 }
 
 module "s3-module" {
-  source = "git::https://git-codecommit.us-east-1.amazonaws.com/v1/repos/terraform.git//s3"
+  source = "git::https://github.com/vengalasanjay/terraform.git//s3"
   project = var.project
   environment = var.environment
   bucketname = var.bucketname
 }
 module "iam-module" {
-  source = "git::https://git-codecommit.us-east-1.amazonaws.com/v1/repos/terraform.git//iam"
+  source = "git::https://github.com/vengalasanjay/terraform.git//iam"
   rolename = var.rolename
 }
 module "glujob-module" {
-  source = "git::https://git-codecommit.us-east-1.amazonaws.com/v1/repos/terraform.git//gluejob"
+  source = "git::https://github.com/vengalasanjay/terraform.git//gluejob"
   iam_role_arn = var.iam_role_arn
   glue_job_script_locations = var.glue_job_script_locations
 }
 module "gluecrawler-module" {
-  source = "git::https://git-codecommit.us-east-1.amazonaws.com/v1/repos/terraform.git//gluecrawler"
+  source = "git::https://github.com/vengalasanjay/terraform.git//gluecrawler"
   iam_role_arn = var.iam_role_arn
   bucket_name = var.bucket_name
   crawlers = var.crawlers
