@@ -24,7 +24,7 @@ module "iam" {
 module "gluejob" {
   depends_on = [module.iam,module.s3]
   source = "git::https://github.com/satuluriakhil420/terraform.git//modules/gluejob?ref=main"
-  iam_role_arn = var.iam_role_arn
+  iam_role_arn = module.iam.myrole_arn
   glue_job_script_locations = var.glue_job_script_locations
 }
 
