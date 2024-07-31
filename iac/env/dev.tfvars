@@ -2,6 +2,7 @@ project = "ens360"
 environment = "dev"
 bucketname = "sentrics-dev-01"
 rolename = "sentrics"
+iam_role_arn = module.iam.myrole_arn
 glue_job_script_locations = [
   "ens360-dashboard-c1-dev-01",
   "ens360-dashboard-pg-dev-01",
