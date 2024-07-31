@@ -37,6 +37,7 @@ module "gluecrawler" {
 
 module "s3" {
   source = "git::https://github.com/satuluriakhil420/terraform.git//modules/s3?ref=main"
+  bucketname = var.bucketname
 }
 
 data "aws_s3_bucket" "existing" {
