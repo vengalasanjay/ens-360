@@ -1,3 +1,4 @@
+region = "us-east-2"
 project = "ens360"
 environment = "dev"
 bucketname = "dashboard-sl-non-prod-345"
@@ -29,4 +30,5 @@ crawlers = [
     db_name = "ens360-dashboard-db-dev-01"
   }
 ]
+lambda_function_name = "ensure360-dashboard-qs-dev-dev-01"
 
