@@ -1,6 +1,6 @@
 project = "ens360"
 environment = "dev"
-bucketname = "sentrics-dev-01"
+bucketname = "dashboard-sl-non-prod-345"
 rolename = "sentrics"
 glue_job_script_locations = [
   "ens360-dashboard-c1-dev-01",
