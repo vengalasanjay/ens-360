@@ -5,7 +5,7 @@ timeout: 2800
 worker_type: "G.2X"
 number_of_workers: 25
 glue_version: "4.0"
-region: "us-east-1"
+region: "us-east-2"
 default_arguments:
   --onboarding.communities": "dashboard-sl-non-prod-01/Ensure360/dev/ens360-transformations-dev/dynamic_shift/community_shift"
   --onboarded.alarms": "dashboard-sl-non-prod-01/Ensure360/dev/ens360-transformations-dev/onboarded_data/alarms_onboarded"
