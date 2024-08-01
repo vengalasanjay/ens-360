@@ -7,6 +7,13 @@ variable "environment" {
   description = "Environment name"
   type        = string
 }
+variable "region" {
+  description = "AWS region"
+}
+
+variable "lambda_function_name" {
+  description = "Name of the Lambda function"
+}
 
 variable "bucketname" {
   description = "The name of the S3 bucket"
