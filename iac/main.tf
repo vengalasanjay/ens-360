@@ -41,7 +41,7 @@ module "s3" {
 }
 
 data "aws_s3_bucket" "existing" {
-  bucket = "dashboard-sl-non-prod-345"
+  bucket = var.bucketname
   depends_on = [module.s3]
 }
 
