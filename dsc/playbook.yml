@@ -7,5 +7,21 @@
   become: yes
   roles:
     - name: gluejob
+
+#- name: Run roles with custom and localhost inventories
+#  hosts: localhost
+#  become: yes
+#  roles:
+#    - role: lambda
+
+- name: Run role on localhost
+  hosts: localhost
+  roles:
+    - role: crawler
+
+- name: Run role on localhost
+  hosts: localhost
+  roles:
+    - role: s3
  
 
