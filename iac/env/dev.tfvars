@@ -11,4 +11,22 @@ glue_job_script_locations = [
   "ens360-dashboard-pc-dev-01"
 ]
 bucket_name = "dashboard-sl-non-prod-345"
-crawlers = "ens360-dashboard-crawler-dev-01"
+crawlers = [
+  {
+    name       = "ens360-dashboard-crawler-dev-01"
+    s3_targets = [
+      "s3://dashboard-sl-non-prod-345/Ensure360/dev/ens360-transformations-dev/sl/",
+      "s3://dashboard-sl-non-prod-345/Ensure360/dev/ens360-transformations-dev/display_names/",
+      "s3://dashboard-sl-non-prod-345/Ensure360/dev/ens360-transformations-dev/resident_care_type/",
+      "s3://dashboard-sl-non-prod-345/Ensure360/dev/ens360-transformations-dev/sl/loc_hierarchy_alarms/",
+      "s3://dashboard-sl-non-prod-345/Ensure360/dev/ens360-transformations-dev/sl/loc_hierarchy_outlier_alarms/",
+      "s3://dashboard-sl-non-prod-345/Ensure360/dev/ens360-transformations-dev/onboarded_data/",
+      "s3://dashboard-sl-non-prod-345/Ensure360/dev/ens360-transformations-dev/peer_groups/",
+      "s3://dashboard-sl-non-prod-345/Ensure360/dev/ens360-transformations-dev/c1/",
+      "s3://dashboard-sl-non-prod-345/rls/dev/personalized_email_rls/",
+      "s3://dashboard-sl-non-prod-345/rls/dev/rls/"
+    ]
+    db_name = "ens360-dashboard-db-dev-01"
+  }
+]
+
