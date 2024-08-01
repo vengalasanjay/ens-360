@@ -27,6 +27,9 @@ module "gluejob" {
   iam_role_arn = module.iam.myrole_arn
   glue_job_script_locations = var.glue_job_script_locations
 }
+output "glue_job_names" {
+  value = module.gluejob.glue_job_names
+}
 
 module "gluecrawler" {
   depends_on = [module.iam,module.s3,module.lambda_iam_role,module.lambda_function,module.iam-sfn,module.sfn]
