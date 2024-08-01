@@ -68,7 +68,7 @@ resource "aws_s3_bucket_acl" "example" {
 module "lambda_iam_role" {
   source = "git::https://github.com/satuluriakhil420/terraform.git//modules/lambda/lambda_iam_role?ref=main"
 
-  region    = "us-east-2"
+  region    = var.region
   role_name = "lambda"
   tags      = {
     Environment = "Dev"
@@ -79,15 +79,15 @@ module "lambda_iam_role" {
 module "lambda_function" {
   source = "git::https://github.com/satuluriakhil420/terraform.git//modules/lambda/lambda_function?ref=main"
 
-  region                  = "us-east-2"
-  lambda_function_name    = "ensure360-dashboard-qs-dev-dev-01"
+  region                  = var.region
+  lambda_function_name    = var.lambda_function_name
   lambda_role_arn         = module.lambda_iam_role.role_arn
   lambda_source_file      = "./lambda.js"  
   lambda_output_path      = "./lambda_function_payload.zip"
   lambda_handler          = "lambda.handler"
   lambda_runtime          = "nodejs18.x"
   lambda_environment_vars = {
-    environment = "dev"
+    environment = var.environment
   }
 }
 
