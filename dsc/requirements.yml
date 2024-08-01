@@ -1,19 +1,19 @@
-- src: https://github.com/satuluriakhil420/ens-ent-360-dsc/tree/main/ansible/roles/crawler
+- src: https://github.com/satuluriakhil420/ens-ent-360-dsc
   scm: git
   version: main
   name: crawler
  
-- src: https://github.com/satuluriakhil420/ens-ent-360-dsc/tree/main/ansible/roles/gluejob
+- src: https://github.com/satuluriakhil420/ens-ent-360-dsc
   scm: git
   version: main
   name: gluejob
  
-    #- src: https://github.com/satuluriakhil420/ens-ent-360-dsc/tree/main/ansible/roles/lambda
+    #- src: https://github.com/satuluriakhil420/ens-ent-360-dsc
     #scm: git
     #  version: main
     #name: lambda
  
-- src: https://github.com/satuluriakhil420/ens-ent-360-dsc/tree/main/ansible/roles/s3
+- src: https://github.com/satuluriakhil420/ens-ent-360-dsc
   scm: git
   version: main
   name: s3
