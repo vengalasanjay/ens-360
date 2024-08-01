@@ -1,4 +1,4 @@
-role: "arn:aws:iam::059643481773:role/gluejob"
+role: "arn:aws:iam::059643481773:role/sentrics"
 command_script_location: "s3://aws-glue-assets-059643481773-us-east-1/scripts/test.py"
 command_python_version: "3"
 timeout: 2800
