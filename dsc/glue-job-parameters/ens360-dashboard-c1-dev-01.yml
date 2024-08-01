@@ -5,7 +5,7 @@ timeout: 2800
 worker_type: "G.2X"
 number_of_workers: 25
 glue_version: "4.0"
-region: "us-east-1"
+region: "us-east-2"
 default_arguments:
   --enable-glue-datacatalog": "true"
   --c1.alarms.source": "enrich-analytics/CompanionOne/alarm-activity/data"
