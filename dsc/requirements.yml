@@ -13,7 +13,25 @@
 #  version: main
 #  name: s3
 
-- src: https://github.com/satuluriakhil420/ens-ent-360-dsc
-  scm: git
+# - src: https://github.com/satuluriakhil420/ens-ent-360-dsc
+#   scm: git
+#   version: main
+#   name: gluejob 
+
+- src: git+https://github.com/your-org/dsc.git
   version: main
-  name: gluejob 
+  name: lambda
+  scm: git
+  path: ansible/roles/lambda
+
+- src: git+https://github.com/your-org/dsc.git
+  version: main
+  name: crawler
+  scm: git
+  path: ansible/roles/crawler
+
+- src: git+https://github.com/your-org/dsc.git
+  version: main
+  name: s3
+  scm: git
+  path: ansible/roles/s3
