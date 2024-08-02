@@ -2,7 +2,7 @@
 #  hosts: localhost
 #  become: yes
 #  roles:
-#    - role: lambda
+#    - name: lambda
 
 - name: Run role on localhost
   hosts: localhost
