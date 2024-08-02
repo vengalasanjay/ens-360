@@ -3,15 +3,15 @@
   #version: main
   #name: lambda
 
-#- src: https://github.com/satuluriakhil420/ens-ent-360-dsc
-#  scm: git
-#  version: main
-#  name: crawler
+- src: https://github.com/satuluriakhil420/ens-ent-360-dsc
+ scm: git
+ version: main
+ name: crawler
 
-#- src: https://github.com/satuluriakhil420/ens-ent-360-dsc
-#  scm: git
-#  version: main
-# name: s3
+- src: https://github.com/satuluriakhil420/ens-ent-360-dsc
+ scm: git
+ version: main
+name: s3
 
 - src: https://github.com/satuluriakhil420/ens-ent-360-dsc
   scm: git
