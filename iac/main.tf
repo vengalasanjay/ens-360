@@ -24,7 +24,7 @@ module "iam" {
 module "gluejob" {
   depends_on = [module.iam,module.s3]
   source = "git::https://github.com/satuluriakhil420/terraform.git//modules/gluejob?ref=main"
-  iam_role_arn = module.iam.myrole_arn
+  iam_role_arn = module.iam.sentrics_role_arn
   glue_job_script_locations = var.glue_job_script_locations
 }
 output "glue_job_names" {
@@ -34,7 +34,7 @@ output "glue_job_names" {
 module "gluecrawler" {
   depends_on = [module.iam,module.s3,module.lambda_iam_role,module.lambda_function,module.iam-sfn,module.sfn]
   source = "git::https://github.com/satuluriakhil420/terraform.git//modules/gluecrawler?ref=main"
-  iam_role_arn = module.iam.myrole_arn
+  iam_role_arn = module.iam.sentrics_role_arn
   bucket_name  = module.s3.bucket_name
 }
 
