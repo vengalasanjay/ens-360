@@ -21,7 +21,7 @@
 - name: Executing main playbook
   hosts: glue_jobs
   vars_files:
-    - "{{ vars_file }}"
+    - vars/ens360-dashboard-c1-dev-01.yml
   vars:
     ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
   become: yes
