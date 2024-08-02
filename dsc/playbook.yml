@@ -4,19 +4,19 @@
 #  roles:
 #    - role: lambda
 
-- name: Run role on localhost
-  hosts: localhost
-  vars:
-    ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
-  roles:
+#- name: Run role on localhost
+# hosts: localhost
+ # vars:
+#    ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
+#  roles:
     - role: crawler
 
-- name: Run role on localhost
-  hosts: localhost
-  vars:
-    ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
-  roles:
-    - role: s3
+#- name: Run role on localhost
+#  hosts: localhost
+#  vars:
+#    ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
+#  roles:
+ #   - role: s3
 
 
  
