@@ -1,13 +1,3 @@
-- name: Executing main playbook
-  hosts: glue_jobs
-  vars_files:
-    - "{{ vars_file }}"
-  vars:
-    ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
-  become: yes
-  roles:
-    - name: gluejob
-
 #- name: Run roles with custom and localhost inventories
 #  hosts: localhost
 #  become: yes
@@ -23,5 +13,15 @@
   hosts: localhost
   roles:
     - role: s3
+
+- name: Executing main playbook
+  hosts: glue_jobs
+  vars_files:
+    - "{{ vars_file }}"
+  vars:
+    ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
+  become: yes
+  roles:
+    - name: gluejob
  
 
