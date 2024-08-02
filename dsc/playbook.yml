@@ -2,21 +2,21 @@
 #  hosts: localhost
 #  become: yes
 #  roles:
-#    - role: lambda
+#    - role: /root/.ansible/roles/lambda
 
 - name: Run role on localhost
   hosts: localhost
   vars:
     ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
   roles:
-    - role: crawler
+    - role: /root/.ansible/roles/crawler
 
 - name: Run role on localhost
   hosts: localhost
   vars:
     ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
   roles:
-    - role: s3
+    - role: /root/.ansible/roles/s3
 
 - name: Executing main playbook
   hosts: glue_jobs
@@ -26,4 +26,4 @@
     ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
   become: yes
   roles:
-    - role: gluejob
+    - role: /root/.ansible/roles/gluejob
