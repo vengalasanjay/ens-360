@@ -13,24 +13,24 @@
 #  version: main
 #  name: s3
 
-- src: https://github.com/satuluriakhil420/ens-ent-360-dsc
+- src: https://github.com/satuluriakhil420/ens-ent-360-dsc.git
   scm: git
   version: main
   name: gluejob 
 
-- src: https://github.com/satuluriakhil420/ens-ent-360-dsc
+- src: https://github.com/satuluriakhil420/ens-ent-360-dsc.git
   version: main
   name: lambda
   scm: git
   path: lambda
 
-- src: https://github.com/satuluriakhil420/ens-ent-360-dsc
+- src: https://github.com/satuluriakhil420/ens-ent-360-dsc.git
   version: main
   name: crawler
   scm: git
   path: crawler
 
-- src: https://github.com/satuluriakhil420/ens-ent-360-dsc
+- src: https://github.com/satuluriakhil420/ens-ent-360-dsc.git
   version: main
   name: s3
   scm: git
