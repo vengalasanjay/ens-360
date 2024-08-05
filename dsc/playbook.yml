@@ -1,6 +1,8 @@
 - name: Run roles with custom and localhost inventories
   hosts: localhost
-  become: yes
+  vars:
+    ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
+  #become: yes
   roles:
     - name: lambda
 
