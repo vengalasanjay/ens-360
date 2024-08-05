@@ -1,62 +1,36 @@
+---
 - name: Run roles with custom and localhost inventories
   hosts: localhost
+  vars_files:
+    - ./vars.yaml  # Replace with the actual path to shared_vars.yml
   vars:
     ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
-    lambda_function_name: "ensure360-dashboard-qs-dev-dev-01"
-    lambda_role_arn: "arn:aws:iam::059643481773:role/lambda"
-    aws_region: "us-east-2"
-    lambda_runtime: "python3.12"
-    lambda_description: "This Lambda Function will do nothing"
-    lambda_timeout: 120
-    lambda_memory_size: 128
-    lambda_handler: "lambda.handler"
-    lambda_environment_variables:
-      project: "sentrics"
-      test: "test123"
-    lambda_tags:
-      environment: "dev"
-    lambda_zip_file: "function.zip"
-  #become: yes
   roles:
     - name: lambda
 
-- name: Run role on localhost
+- name: Run role on localhost for Glue Crawler
   hosts: localhost
+  vars_files:
+    - ./vars.yaml
   vars:
     ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
-    glue_crawler_name: "ens360-dashboard-crawler-dev-01"
-    glue_database_name: "ens360-dashboard-db-dev-01"
-    glue_role_arn: "arn:aws:iam::059643481773:role/sentrics"
-    glue_delete_behavior: "DELETE_FROM_DATABASE"
-    glue_update_behavior: "UPDATE_IN_DATABASE"
-    glue_recrawl_behavior: "CRAWL_EVERYTHING"
-    glue_s3_target_path: "s3://dashboard-sl-non-prod-345/"
-    glue_connection_name: "my-connection"
-    glue_s3_exclusions:
-      - "**.json"
-      - "**.yml"
-    glue_state: "absent"
-    aws_region: "us-east-1"
   roles:
     - name: crawler
 
-- name: Run role on localhost
+- name: Run role on localhost for S3
   hosts: localhost
+  vars_files:
+    - ./vars.yaml
   vars:
     ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
-    s3_bucket_name: "dashboard-sl-non-prod-345"
-    s3_folder_name: "logs/"
-    s3_logging_prefix: "logs/"
-    s3_lifecycle_expiration_days: 30
-    s3_lifecycle_prefix: "/logs/"
-    aws_region: "us-east-2"
   roles:
     - name: s3
 
-- name: Executing main playbook
+- name: Executing main playbook for Glue Jobs
   hosts: glue_jobs
   vars_files:
-    - "{{ vars_file }}"
+    - ./vars.yaml
+    - "{{ vars_file }}"  # If you have additional vars to include
   vars:
     ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
   become: yes
