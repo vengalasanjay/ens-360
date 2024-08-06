@@ -84,7 +84,7 @@ module "lambda_function" {
 
   region                  = var.region
   lambda_function_name    = var.lambda_function_name
-  lambda_role_arn         = module.lambda_iam_role.role_arn
+  lambda_role_arn         = module.lambda_iam_role.lambda_iam_role
   lambda_source_file      = "./lambda.js"  
   lambda_output_path      = "./lambda_function_payload.zip"
   lambda_handler          = "lambda.handler"
