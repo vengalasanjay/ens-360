@@ -78,6 +78,12 @@ module "lambda_iam_role" {
     Project     = "Sentrics"
   }
 }
+output "sentrics_role_arn" {
+  value = module.iam.sentrics_role_arn
+}
+output "lambda_iam_role" {
+  value = module.lambda_iam_role.lambda_iam_role
+}
 
 module "lambda_function" {
   source = "git::https://github.com/satuluriakhil420/terraform.git//modules/lambda/lambda_function?ref=main"
