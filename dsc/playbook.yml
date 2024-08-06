@@ -1,10 +1,32 @@
 ---
+- name: Load ARN values from JSON files
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Load Sentrics Role ARN from JSON file
+      slurp:
+        src: sentrics_role_arn.json
+      register: sentrics_role_arn_content
+
+    - name: Load Lambda Role ARN from JSON file
+      slurp:
+        src: lambda_role_arn.json
+      register: lambda_role_arn_content
+
+    - name: Set Sentrics Role ARN variable
+      set_fact:
+        sentrics_role_arn: "{{ sentrics_role_arn_content['content'] | b64decode | trim }}"
+
+    - name: Set Lambda Role ARN variable
+      set_fact:
+        lambda_role_arn: "{{ lambda_role_arn_content['content'] | b64decode | trim }}"
 - name: Run roles with custom and localhost inventories
   hosts: localhost
   vars_files:
     - ./vars.yaml  # Replace with the actual path to shared_vars.yml
   vars:
     ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
+    lambda_role_arn: "{{ lambda_role_arn }}"
   roles:
     - name: lambda
 
@@ -33,6 +55,7 @@
     - "{{ vars_file }}"  # If you have additional vars to include
   vars:
     ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
+    glue_role_arn: "{{ sentrics_role_arn }}"
   become: yes
   roles:
     - name: gluejob
