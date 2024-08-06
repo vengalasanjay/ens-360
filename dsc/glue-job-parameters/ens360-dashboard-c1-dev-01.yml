@@ -1,5 +1,5 @@
 role: "arn:aws:iam::059643481773:role/sentrics"
-command_script_location: "s3://aws-glue-assets-059643481773-us-east-1/scripts/test.py"
+command_script_location: "s3://aws-glue-assets-059643481773-us-east-1/scripts/ens360-dashboard-c1-dev-01.py"
 command_python_version: "3"
 timeout: 2800
 worker_type: "G.2X"
