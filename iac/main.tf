@@ -26,6 +26,7 @@ module "gluejob" {
   source = "git::https://github.com/satuluriakhil420/terraform.git//modules/gluejob?ref=main"
   iam_role_arn = module.iam.sentrics_role_arn
   glue_job_script_locations = var.glue_job_script_locations
+  crawlers = var.crawlers
 }
 output "glue_job_names" {
   value = module.gluejob.glue_job_names
