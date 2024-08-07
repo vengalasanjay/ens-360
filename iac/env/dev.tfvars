@@ -36,32 +36,34 @@ sfn_policy = "step_function_policy_sentrics"
 state_machines = [
   {
     name       = "ens-360-dashboard-wf-dev"
-    definition = jsonencode({
-      Comment = "First State Machine"
-      StartAt = "HelloWorld"
-      States = {
-        HelloWorld = {
-          Type     = "Pass"
-          Result   = "Hello from the first state machine!"
-          End      = true
-        }
-      }
-    })
+    definition = <<EOF
+{
+  "Comment": "First State Machine",
+  "StartAt": "HelloWorld",
+  "States": {
+    "HelloWorld": {
+      "Type": "Pass",
+      "Result": "Hello from the first state machine!",
+      "End": true
+    }
+  }
+}
+EOF
   },
   {
     name       = "ens-360-dashboard-wf-dev-02"
-    definition = jsonencode({
-      Comment = "Second State Machine"
-      StartAt = "HelloWorld"
-      States = {
-        HelloWorld = {
-          Type     = "Pass"
-          Result   = "Hello from the second state machine!"
-          End      = true
-        }
-      }
-    })
+    definition = <<EOF
+{
+  "Comment": "Second State Machine",
+  "StartAt": "HelloWorld",
+  "States": {
+    "HelloWorld": {
+      "Type": "Pass",
+      "Result": "Hello from the second state machine!",
+      "End": true
+    }
+  }
+}
+EOF
   }
 ]
-
-
