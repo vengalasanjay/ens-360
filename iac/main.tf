@@ -50,7 +50,7 @@ module "lambda_iam_role" {
   source = "git::https://github.com/satuluriakhil420/terraform.git//modules/lambda/lambda_iam_role?ref=main"
  
   region    = var.region
-  role_name = var.lambda_role
+  role_name = "lambda"
   tags      = {
     Environment = var.environment
     Project     = "Sentrics"
