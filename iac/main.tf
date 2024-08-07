@@ -103,6 +103,6 @@ module "iam-sfn" {
  
 module "sfn" {
   source = "git::https://github.com/satuluriakhil420/terraform.git//modules/iam-step-function/sfn?ref=main"
-  state_machine_name = var.state_machines
+  state_machines = var.state_machines
   role_arn           = module.iam-sfn.step_function_role_arn
 }
