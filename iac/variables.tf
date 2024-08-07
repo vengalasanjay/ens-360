@@ -48,15 +48,11 @@ variable "state_machines" {
   }))
 }
 
-variable "role_arn" {
-  description = "ARN of the IAM role for Step Functions"
-  type        = string
-}
-variable "role_name" {
+variable "snf_role" {
   description = "Name of the IAM role"
 }
 
-variable "policy_name" {
+variable "snf_policy" {
   description = "Name of the IAM policy"
 }
 
