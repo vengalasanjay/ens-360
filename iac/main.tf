@@ -44,30 +44,7 @@ module "s3" {
   bucketname = var.bucketname
 }
  
-data "aws_s3_bucket" "existing" {
-  bucket = var.bucketname
-  depends_on = [module.s3]
-}
- 
-resource "aws_s3_bucket_ownership_controls" "example" {
-  depends_on = [module.s3]
- 
-  bucket = data.aws_s3_bucket.existing.id
- 
-  rule {
-    object_ownership = "BucketOwnerPreferred"
-  }
-}
- 
-resource "aws_s3_bucket_acl" "example" {
-  depends_on = [
-    aws_s3_bucket_ownership_controls.example,
-    module.s3
-  ]
- 
-  bucket = data.aws_s3_bucket.existing.id
-  acl    = "private"
-}
+
  
 module "lambda_iam_role" {
   source = "git::https://github.com/satuluriakhil420/terraform.git//modules/lambda/lambda_iam_role?ref=main"
