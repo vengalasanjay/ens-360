@@ -13,7 +13,7 @@ terraform {
 }
  
 provider "aws" {
-  region = "us-east-2"
+  region = var.region
 }
  
 module "iam" {
@@ -50,9 +50,9 @@ module "lambda_iam_role" {
   source = "git::https://github.com/satuluriakhil420/terraform.git//modules/lambda/lambda_iam_role?ref=main"
  
   region    = var.region
-  role_name = "lambda"
+  role_name = var.lambda_role
   tags      = {
-    Environment = "Dev"
+    Environment = var.environment
     Project     = "Sentrics"
   }
 }
