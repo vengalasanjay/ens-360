@@ -48,11 +48,11 @@ variable "state_machines" {
   }))
 }
 
-variable "snf_role" {
+variable "sfn_role" {
   description = "Name of the IAM role"
 }
 
-variable "snf_policy" {
+variable "sfn_policy" {
   description = "Name of the IAM policy"
 }
 
