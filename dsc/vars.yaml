@@ -24,7 +24,7 @@ glue_recrawl_behavior: "CRAWL_EVERYTHING"
 #glue_s3_exclusions:
 #  - "**.json"
 #  - "**.yml"
-glue_state: "present"
+#glue_state: "present"
  
 s3_bucket_name: "dashboard-sl-non-prod-345"
 s3_folder_name: "logs/"
