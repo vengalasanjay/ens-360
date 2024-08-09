@@ -24,17 +24,17 @@
     - ./vars.yaml
   vars:
     ansible_python_interpreter: /root/.pyenv/versions/3.11.9/bin/python
+  roles:
+    - name: s3
 
 - name: Run role on localhost for step function
   hosts: localhost
-  vars_files:
-    - ./vars.yaml
+  #vars_files:
+  #  - ./vars.yaml
   vars:
     ansible_python_interpreter: /root/.pyenv/versions/3.11.9/bin/python
   roles:
     - name: stepfunction
-  roles:
-    - name: s3
 
 - name: Executing main playbook for Glue Jobs
   hosts: glue_jobs
