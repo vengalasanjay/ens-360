@@ -19,7 +19,8 @@ glue_role_arn: "arn:aws:iam::ACCOUNT_ID:role/sentrics"
 glue_delete_behavior: "DELETE_FROM_DATABASE"
 glue_update_behavior: "UPDATE_IN_DATABASE"
 glue_recrawl_behavior: "CRAWL_EVERYTHING"
-glue_s3_target_path: "s3://dashboard-sl-non-prod-345/target/Ensure360/dev/ens360-transformations-dev/"
+glue_s3_target_path:  
+  - "s3://dashboard-sl-non-prod-345/target/Ensure360/dev/ens360-transformations-dev/"
 glue_connection_name: "my-connection"
 glue_s3_exclusions:
   - "**.json"
