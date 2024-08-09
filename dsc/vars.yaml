@@ -52,9 +52,9 @@ glue_s3_targets:
   - Path: "s3://dashboard-sl-non-prod-345/target/rls/dev/personalized_email_rls/"
     ConnectionName: "myconnection"
     Exclusions: ["*.json"]
-  # - Path: "s3://dashboard-sl-non-prod-345/target/rls/dev/rls/"
-  #   ConnectionName: "myconnection"
-  #   Exclusions: ["*.json"]
+  - Path: "s3://dashboard-sl-non-prod-345/target/rls/dev/rls/"
+    ConnectionName: "myconnection"
+    Exclusions: ["*.json"]
 
 glue_state: "present"
  
