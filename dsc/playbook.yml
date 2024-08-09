@@ -4,7 +4,7 @@
   vars_files:
     - ./vars.yaml  # Replace with the actual path to shared_vars.yml
   vars:
-    ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
+    #ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
     #lambda_role_arn: "{{ lambda_role_arn }}"
   roles:
     - name: lambda
@@ -14,7 +14,7 @@
   vars_files:
     - ./vars.yaml
   vars:
-    ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
+    #ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
   roles:
     - name: crawler
 
@@ -23,7 +23,7 @@
   vars_files:
     - ./vars.yaml
   vars:
-    ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
+    #ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
   roles:
     - name: s3
 
@@ -33,7 +33,7 @@
     - ./vars.yaml
     - "{{ vars_file }}"  # If you have additional vars to include
   vars:
-    ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
+    #ansible_python_interpreter: /root/.pyenv/versions/3.11.8/bin/python
     #glue_role_arn: "{{ sentrics_role_arn }}"
   become: yes
   roles:
