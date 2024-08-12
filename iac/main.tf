@@ -15,9 +15,9 @@ terraform {
 provider "aws" {
   region = var.region
 }
- data "aws_iam_role" "existing_role" {
-  name = "sentrics"
-}
+# data "aws_iam_role" "existing_role" {
+#  name = "sentrics"
+#}
 #module "iam" {
 #  source = "git::https://github.com/satuluriakhil420/terraform.git//modules/iam?ref=main"
 # rolename = var.rolename
@@ -26,7 +26,7 @@ provider "aws" {
 module "gluejob" {
 #  depends_on = [module.iam,module.s3]
   source = "git::https://github.com/satuluriakhil420/terraform.git//modules/gluejob?ref=main"
-  iam_role_arn = data.aws_iam_role.existng_role.arn
+  iam_role_arn = var.sentrics_role_arn
   glue_job_script_locations = var.glue_job_script_locations
 }
 output "glue_job_names" {
@@ -36,7 +36,7 @@ output "glue_job_names" {
 module "gluecrawler" {
   depends_on = [module.lambda_iam_role,module.lambda_function,module.iam-sfn,module.sfn]
   source = "git::https://github.com/satuluriakhil420/terraform.git//modules/gluecrawler?ref=main"
-  iam_role_arn = data.aws_iam_role.existng_role.arn
+  iam_role_arn = var.sentrics_role_arn
   bucket_name  = var.bucketname
   crawlers = var.crawlers
 }
