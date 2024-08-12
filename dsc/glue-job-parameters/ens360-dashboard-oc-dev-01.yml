@@ -23,4 +23,5 @@ default_arguments:
   --job-language: "python"
   --alarms.source: "dashboard-sl-non-prod-3456/source/SentricsProduction/alarms"
   --enable-auto-scaling: "true"
+  --facilities.source: "dashboard-sl-non-prod-3456/source/SentricsProduction/facilities/"
 description: "The job filters records within ensure communities under 'alarms' and 'events' sources based on the 'createdat' timestamp, utilizing dates specified in a CSV file to exclude test data."
