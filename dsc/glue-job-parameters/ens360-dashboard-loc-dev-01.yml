@@ -24,4 +24,5 @@ default_arguments:
   --job-language: "python"
   --fliter.locationtype.source: "dashboard-sl-non-prod-3456/target/Ensure360/dev/ens360-transformations-dev/filtered_locationtype"
   --enable-auto-scaling: "true"
+  --facilities.source: "dashboard-sl-non-prod-3456/source/SentricsProduction/facilities/"
 description: "This job is created to derive alarm information for each location type of every Ensure community"
