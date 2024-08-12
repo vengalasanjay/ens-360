@@ -46,16 +46,16 @@ module "s3" {
  
 
  
-#module "lambda_iam_role" {
-#  source = "git::https://github.com/satuluriakhil420/terraform.git//modules/lambda/lambda_iam_role?ref=main"
+module "lambda_iam_role" {
+  source = "git::https://github.com/satuluriakhil420/terraform.git//modules/lambda/lambda_iam_role?ref=main"
  
-#  region    = var.region
-#  role_name = "lambda"
-#  tags      = {
-#    Environment = var.environment
-#    Project     = "Sentrics"
-# }
-#}
+  region    = var.region
+  role_name = "lambda"
+  tags      = {
+    Environment = var.environment
+    Project     = "Sentrics"
+ }
+}
  
 module "lambda_function" {
   source = "git::https://github.com/satuluriakhil420/terraform.git//modules/lambda/lambda_function?ref=main"
