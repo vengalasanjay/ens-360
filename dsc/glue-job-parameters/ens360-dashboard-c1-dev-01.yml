@@ -21,4 +21,5 @@ default_arguments:
   --enable-continuous-cloudwatch-log: "true"
   --job-language: "python"
   --enable-auto-scaling: "true"
+  --facilities.source: "dashboard-sl-non-prod-3456/source/SentricsProduction/facilities/"
 description: "This job is created to derive the alarm timeline from the CompanionOne data source."
