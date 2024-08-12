@@ -25,40 +25,40 @@ glue_recrawl_behavior: "CRAWL_EVERYTHING"
 #   - "**.json"
 #   - "**.yml"
 glue_s3_targets:
-  - Path: "s3://dashboard-sl-non-prod-345/target/Ensure360/dev/ens360-transformations-dev/sl/"
+  - Path: "s3://dashboard-sl-non-prod-3456/target/Ensure360/dev/ens360-transformations-dev/sl/"
     ConnectionName: "myconnection"
     Exclusions: ["*.json"]
-  - Path: "s3://dashboard-sl-non-prod-345/target/Ensure360/dev/ens360-transformations-dev/display_names/"
+  - Path: "s3://dashboard-sl-non-prod-3456/target/Ensure360/dev/ens360-transformations-dev/display_names/"
     ConnectionName: "myconnection"
     Exclusions: ["*.json"]
-  - Path: "s3://dashboard-sl-non-prod-345/target/Ensure360/dev/ens360-transformations-dev/resident_care_type/"
+  - Path: "s3://dashboard-sl-non-prod-3456/target/Ensure360/dev/ens360-transformations-dev/resident_care_type/"
     ConnectionName: "myconnection"
     Exclusions: ["*.json"]
-  - Path: "s3://dashboard-sl-non-prod-345/target/Ensure360/dev/ens360-transformations-dev/sl/loc_hierarchy_alarms/"
+  - Path: "s3://dashboard-sl-non-prod-3456/target/Ensure360/dev/ens360-transformations-dev/sl/loc_hierarchy_alarms/"
     ConnectionName: "myconnection"
     Exclusions: ["*.json"]
-  - Path: "s3://dashboard-sl-non-prod-345/target/Ensure360/dev/ens360-transformations-dev/sl/loc_hierarchy_outlier_alarms/"
+  - Path: "s3://dashboard-sl-non-prod-3456/target/Ensure360/dev/ens360-transformations-dev/sl/loc_hierarchy_outlier_alarms/"
     ConnectionName: "myconnection"
     Exclusions: ["*.json"]
-  - Path: "s3://dashboard-sl-non-prod-345/target/Ensure360/dev/ens360-transformations-dev/onboarded_data/"
+  - Path: "s3://dashboard-sl-non-prod-3456/target/Ensure360/dev/ens360-transformations-dev/onboarded_data/"
     ConnectionName: "myconnection"
     Exclusions: ["*.json"]
-  - Path: "s3://dashboard-sl-non-prod-345/target/Ensure360/dev/ens360-transformations-dev/peer_groups/"
+  - Path: "s3://dashboard-sl-non-prod-3456/target/Ensure360/dev/ens360-transformations-dev/peer_groups/"
     ConnectionName: "myconnection"
     Exclusions: ["*.json"]
-  - Path: "s3://dashboard-sl-non-prod-345/target/Ensure360/dev/ens360-transformations-dev/c1/"
+  - Path: "s3://dashboard-sl-non-prod-3456/target/Ensure360/dev/ens360-transformations-dev/c1/"
     ConnectionName: "myconnection"
     Exclusions: ["*.json"]
-  - Path: "s3://dashboard-sl-non-prod-345/target/rls/dev/personalized_email_rls/"
+  - Path: "s3://dashboard-sl-non-prod-3456/target/rls/dev/personalized_email_rls/"
     ConnectionName: "myconnection"
     Exclusions: ["*.json"]
-  - Path: "s3://dashboard-sl-non-prod-345/target/rls/dev/rls/"
+  - Path: "s3://dashboard-sl-non-prod-3456/target/rls/dev/rls/"
     ConnectionName: "myconnection"
     Exclusions: ["*.json"]
 
 glue_state: "present"
  
-s3_bucket_name: "dashboard-sl-non-prod-345"
+s3_bucket_name: "dashboard-sl-non-prod-3456"
 s3_folder_name: "logs/"
 s3_logging_prefix: "logs/"
 s3_lifecycle_expiration_days: 30
