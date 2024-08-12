@@ -10,6 +10,10 @@ variable "environment" {
 variable "region" {
   description = "AWS region"
 }
+variable "sentrics_role_arn" {
+  description = "The sentrics_role_arn"
+  type        = string
+}
 
 variable "lambda_function_name" {
   description = "Name of the Lambda function"
