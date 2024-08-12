@@ -1,7 +1,7 @@
 region = "us-east-2"
 project = "ens360"
 environment = "dev"
-bucketname = "dashboard-sl-non-prod-345"
+bucketname = "dashboard-sl-non-prod-3456"
 rolename = "sentrics"
 sentrics_role_arn = "arn:aws:iam::059643481773:role/sentrics"
 glue_job_script_locations = [
