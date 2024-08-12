@@ -18,14 +18,14 @@
   roles:
     - name: crawler
 
-- name: Run role on localhost for S3
-  hosts: localhost
-  vars_files:
-    - ./vars.yaml
-  vars:
-    ansible_python_interpreter: /root/.pyenv/versions/3.11.9/bin/python
-  roles:
-    - name: s3
+#- name: Run role on localhost for S3
+#  hosts: localhost
+#  vars_files:
+#    - ./vars.yaml
+#  vars:
+#    ansible_python_interpreter: /root/.pyenv/versions/3.11.9/bin/python
+# 3 roles:
+#    - name: s3
 
 - name: Run role on localhost for step function
   hosts: localhost
