@@ -3,6 +3,7 @@ project = "ens360"
 environment = "dev"
 bucketname = "dashboard-sl-non-prod-345"
 rolename = "sentrics"
+sentrics_role_arn = "arn:aws:iam::059643481773:role/sentrics"
 glue_job_script_locations = [
   "ens360-dashboard-c1-dev-01",
   "ens360-dashboard-pg-dev-01",
